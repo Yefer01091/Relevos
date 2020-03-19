@@ -14,10 +14,10 @@ import java.util.logging.Logger;
  */
 public class Persona extends Equipo {
 
-    Equipo equipo;
-    int metrosinicio;
-    int metrosrecorrido;
-    int id;
+    private Equipo equipo;
+    private int metrosinicio;
+    private int metrosrecorrido;
+    private int id;
 
     public Persona(Equipo equipo, int metrosinicio, int id) {
 
@@ -30,7 +30,7 @@ public class Persona extends Equipo {
     public synchronized void run() {
 //fe
         synchronized (equipo) {
-            while (id != equipo.contador) {
+            while (id != equipo.getContador()) {
                 try {
                     equipo.wait();
                 } catch (InterruptedException ex) {
@@ -53,10 +53,18 @@ public class Persona extends Equipo {
 
             }
 
-            equipo.contador++;
+            equipo.setContador(equipo.getContador()+1);
             equipo.notifyAll();
         }
 
+    }
+/**
+ * 
+ * metodo para saber los metros recorridos por persona
+ * @return retorna los metros recorriido dela persona
+ */
+    public int getMetrosrecorrido() {
+        return metrosrecorrido;
     }
 
 }

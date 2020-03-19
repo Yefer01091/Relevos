@@ -12,17 +12,17 @@ package com.mycompany.relevos;
 public class Main {
     public static void main(String[] args) {
         
-       Equipo azul=new practica.Equipo(); 
+       Equipo azul=new Equipo(); 
         Persona corredor1=new Persona(azul,0,0);
         Persona corredor2=new Persona(azul,33,1);
         Persona corredor3=new Persona(azul,66,2);
         
-        Equipo amarillo=new practica.Equipo(); 
+        Equipo amarillo=new Equipo(); 
         Persona corredora1=new Persona(amarillo,0,0);
         Persona corredora2=new Persona(amarillo,33,1);
         Persona corredora3=new Persona(amarillo,66,2);
         
-        Equipo rojo=new practica.Equipo(); 
+        Equipo rojo=new Equipo(); 
         Persona corredorb1=new Persona(rojo,0,0);
         Persona corredorb2=new Persona(rojo,33,1);
         Persona corredorb3=new Persona(rojo,66,2);

@@ -13,11 +13,24 @@ package com.mycompany.relevos;
 public class Equipo extends Thread  {
  
  
- int contador=0;
+ private int contador=0;
 
     public Equipo() {
                 
        
+    }
+/**
+ * metodo que  devuelve un contador
+ * @return  retorna una variable de control
+ */
+    
+    
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
     }
      
 }
