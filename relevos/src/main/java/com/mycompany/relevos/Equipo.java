@@ -28,7 +28,11 @@ public class Equipo extends Thread  {
     public int getContador() {
         return contador;
     }
-
+/**
+ * 
+ * modifica mi varible contador
+ * @param contador recibe un entero 
+ */
     public void setContador(int contador) {
         this.contador = contador;
     }
